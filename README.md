@@ -3,6 +3,7 @@ This is the repo for software engineering related to deep learning.
 
 ## 时间安排
 预计四个课时讲完所有内容，每个课时+QA时长2\～3h，安排如下：
+
 1. 预备和编译链接运行：2016.7.9 13:00 已完成
 2. Linux命令行：2016.7.13 19:30 已完成
 3. 代码风格和工程设计：2016.7.16 9:00 补export/source,stdin/pipe
