@@ -21,37 +21,37 @@ This is the repo for software engineering related to deep learning.
 
 ### 欲学习的技能分为三类：Linux理论和操作，软件工程，高效工具链。目录如下：
 1. Linux理论和操作
-	- Linux命令行
-		- 前后台调度：fg/jobs/nohup/&
-		- 管道和输出重定向：pipe/&1/&2/\>/\>\>/tee/tail
-		- 文件查找和正则表达式：which/locate/updatedb/find/grep/wc/sed
-		- 循环：while/for in/xargs/find -exec
-		- 监测系统：w/bmon/iostat/iotop
-		- misc：ln/export/实时设置变量/source/chmod/chown/#!/sshpass/crontab
-		- 例子：简单监测程序：while/variables/wc
-	- 编译链接运行
-		- 编译：\*.cpp-\>\*.o, cc/gcc/g++/c++/-I
-		- 链接：\*.o-\>{\*.so, \*.a, exec}, -L\*
-		- 运行：PATH/LD\_LIBRARY\_PATH
-		- misc：ldd/ldconfig/libxxx-dev/{python, matlab}可执行文件
-		- 例子：caffe编译：CMakeLists/Makefile/cmake/make
-		- 例子：cudnn安装
-		- 例子：matcaffe找不到\*.so
+	- 1.1 Linux命令行
+		- 1.1.1 前后台调度：fg/jobs/nohup/&
+		- 1.1.2 管道和输出重定向：pipe/&1/&2/\>/\>\>/tee/tail
+		- 1.1.3 文件查找和正则表达式：which/locate/updatedb/find/grep/wc/sed
+		- 1.1.4 循环：while/for in/xargs/find -exec
+		- 1.1.5 监测系统：w/bmon/iostat/iotop
+		- 1.1.6 misc：ln/export/实时设置变量/source/chmod/chown/#!/sshpass/crontab
+		- 1.1.7 例子：简单监测程序：while/variables/wc
+	- 1.2 编译链接运行
+		- 1.2.1 编译：\*.cpp-\>\*.o, cc/gcc/g++/c++/-I
+		- 1.2.2 链接：\*.o-\>{\*.so, \*.a, exec}, -L\*
+		- 1.2.3 运行：PATH/LD\_LIBRARY\_PATH
+		- 1.2.4 misc：ldd/ldconfig/libxxx-dev/{python, matlab}可执行文件
+		- 1.2.5 例子：caffe编译：CMakeLists/Makefile/cmake/make
+		- 1.2.6 例子：cudnn安装
+		- 1.2.7 例子：matcaffe找不到\*.so
 
 2. 软件工程
-	- caffe python代码风格/PEP8/Google python代码风格
-		- 最最重要的：与已有代码保持一致；最重要的：看PyCharm提示
-		- 命名规范：类名大写，其余小写，下划线分隔，不camel，不匈牙利
-		- 不import \*
-		- 列表和字典用默认迭代器
-		- 括号前后没空格；冒号逗号前没后有空格；索引冒号加减号前后没空格；参数列表没空格
-		- 顶层函数间空两行，类内函数间空一行
-		- @ 悬挂缩进和垂直对齐
-	- caffe工程目录结构设计
-	- fast-rcnn
-		- fast-rcnn工程目录结构设计
-		- log系统实现：set x/e/u, exec/&\>/process subtitution
-	- python-glog
+	- 2.1 caffe python代码风格/PEP8/Google python代码风格
+		- 2.1.1 最最重要的：与已有代码保持一致；最重要的：看PyCharm提示
+		- 2.1.2 命名规范：类名大写，其余小写，下划线分隔，不camel，不匈牙利
+		- 2.1.3 不import \*
+		- 2.1.4 列表和字典用默认迭代器
+		- 2.1.5 括号前后没空格；冒号逗号前没后有空格；索引冒号加减号前后没空格；参数列表没空格
+		- 2.1.6 顶层函数间空两行，类内函数间空一行
+		- 2.1.7 @ 悬挂缩进和垂直对齐
+	- 2.2 caffe工程目录结构设计
+	- 2.3 fast-rcnn
+		- 2.3.1 fast-rcnn工程目录结构设计
+		- 2.3.2 log系统实现：set x/e/u, exec/&\>/process subtitution
+	- 2.4 python-glog
 3. 高效的工具链
 	- 3.1  vim
 		- 3.1.1 两种主要模式：命令/插入/Esc/i/:w/:wq
