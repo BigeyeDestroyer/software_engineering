@@ -11,7 +11,7 @@
 	sudo pip install matplotlib
 	sudo pip install -r $CAFFE_ROOT/python/requirements.txt
 
-所以依赖库以及python依赖包安装完成后，用下列命令配置编译：
+所有依赖库以及python依赖包安装完成后，用下列命令配置编译：
 
 	cd $CAFFE_ROOT
 	mkdir build && cd build && cmake ..
@@ -35,6 +35,7 @@ cmake正确后，就可以进行编译：
 -j后面的数字代表并行编译的核数目，建议设置为你的CPU实际并行核数目-1。CPU并行核数目可在命令行中用`nproc`命令查看。
 
 官方的编译命令如下，当然**make all**相当于make：
+
 	make all
 	make install
 	make runtest
@@ -66,11 +67,9 @@ cmake正确后，就可以进行编译：
 
 ## 代码阅读
 - [知乎][1]
-- [安装与测试][2]
-- [源码解析][3]
-- [教程合集][4]
+- [源码解析][2]
+- [教程合集][3]
 
 [1]:	https://www.zhihu.com/question/27982282
-[2]:	https://zhuanlan.zhihu.com/p/24683142
-[3]:	https://zhuanlan.zhihu.com/p/24343706?refer=dlclass
-[4]:	https://absentm.github.io/2016/05/14/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0Caffe%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%E9%9B%86%E5%90%88/
+[2]:	https://zhuanlan.zhihu.com/p/24343706?refer=dlclass
+[3]:	https://absentm.github.io/2016/05/14/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0Caffe%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%E9%9B%86%E5%90%88/
