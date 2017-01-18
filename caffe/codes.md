@@ -6,6 +6,7 @@
 ## Ubuntu + QT
 ### 需要注意的地方：
 - 在QT中打开**CMakeLists.txt**后会报找不到**CMAKE\_C\_COMPILER**的错，打开相应的build目录下的**CMakeCache.txt**文件后为CMAKE\_C\_COMPILER添加gcc路径即可：
+
 	CMAKE_C_COMPILER:STRING=/usr/bin/gcc
 
 [1]:	https://www.zhihu.com/question/27982282
