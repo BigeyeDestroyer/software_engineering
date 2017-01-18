@@ -34,6 +34,11 @@ cmake正确后，就可以进行编译：
 
 -j后面的数字代表并行编译的核数目，建议设置为你的CPU实际并行核数目-1。CPU并行核数目可在命令行中用`nproc`命令查看。
 
+官方的编译命令如下，当然**make all**相当于make：
+	make all
+	make install
+	make runtest
+
 编译完成后，为方便调用命令行接口和python接口，可以按如下方式添加环境变量，根据喜欢用的shell的不同，写到`~/.bashrc`或`~/.zshrc`中：
 
 	export CAFFE_ROOT=/path/to/your/caffe
