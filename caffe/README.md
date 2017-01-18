@@ -42,7 +42,7 @@ cmake正确后，就可以进行编译：
 
 
 ### Python接口
-在用cmake配置安装过程时，如果python的包不够全会发生不自动编译pycaffe模块的现象，但并不会有任何提示。这样，在试图`import caffe`时会发生`no module named _caffe`的错误。解决方法是按照本教程前文所讲的方式安装python软件包，然后删掉`build`文件夹，重新`cmake`，重新`make`。 
+在用cmake配置安装过程时，如果python的包不够全会发生不自动编译pycaffe模块的现象，但并不会有任何提示。这样，在试图`import caffe`时会发生`no module named _caffe`的错误。解决方法是按照本教程前文所讲的方式安装python软件包，然后删掉`build`文件夹，重新`cmake`，重新`make`。
 
 ### Matlab接口
 * 在用cmake配置安装过程时，如果matlab是采用在`PATH`中添加`/usr/local/MATLAB/R20xxx/bin`这种方式，则会出现找不到matlab的情况。这一方案很不规范，不应当在`PATH`中直接加软件可执行文件夹，而应当在`/usr/bin`下建立软链。
