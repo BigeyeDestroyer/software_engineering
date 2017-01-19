@@ -28,4 +28,14 @@
 	- **\\#**表示**从头开始**，删除最短的介于**/**与**sbin:**之间的内容
 	- **\#\#**表示**从头开始**删除**最长**的  
 
+### 数据流重定向
+- 基本概念：每个linux命令都有标准输入、标准输出以及标准错误输出：
+	- 标准输入(stdin): 代码为0, 使用\<或\<\<
+	- 标准输出(stdout): 代码为1, 使用\>或\>\>
+	- 标准错误输出(stderr): 代码为2, 使用2\>或2\>\>
+	- 其中，stdout与stderr**默认输出到屏幕**
+- 将stdout与stderr分别存到不同的文件中去：
+
+		find /home -name .bashrc > list_right 2> list_err
+
 [1]:	http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#cross-installation
