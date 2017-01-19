@@ -1,5 +1,8 @@
 ### Basic installation
 - [cuda][1]
+	- sudo service lightdm stop
+	- install cuda
+	- sudo service lightdm start
 - cudnn
 	- \*.h -\> /usr/local/cuda/include
 	- \*.so -\> /usr/local/cuda/lib64
