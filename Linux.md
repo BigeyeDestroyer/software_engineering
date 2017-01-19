@@ -19,10 +19,10 @@
 - **declare**的使用
 
 		declare -i randint=$RANDOM*10/23767; echo $randint
-
-- 上面的例子将**randint声明为一个整数**，然后调用环境变量RANDOM得到一个0到9的随机整数
+	- 上面的例子将**randint声明为一个整数**，然后调用环境变量RANDOM得到一个0到9的随机整数
 
 - 变量删除
+
 		path=${PATH}
 		echo ${path#/*sbin:}
 	- **\\#**表示**从头开始**，删除最短的介于**/**与**sbin:**之间的内容
