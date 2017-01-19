@@ -29,13 +29,28 @@
 	- **\#\#**表示**从头开始**删除**最长**的  
 
 ### 数据流重定向
-- 基本概念：每个linux命令都有标准输入、标准输出以及标准错误输出：
+- 基本概念：每个linux命令都有**标准输入**、**标准输出**以及**标准错误输出**：
 	- 标准输入(stdin): 代码为0, 使用\<或\<\<
 	- 标准输出(stdout): 代码为1, 使用\>或\>\>
 	- 标准错误输出(stderr): 代码为2, 使用2\>或2\>\>
 	- 其中，stdout与stderr**默认输出到屏幕**
+	- **\>**表示覆盖，**\>\>**表示append
 - 将stdout与stderr分别存到不同的文件中去：
 
 		find /home -name .bashrc > list_right 2> list_err
+
+- 将正确与错误数据写入一个文件的语法：
+
+		find /home -name .bashrc > list 2>&1
+	- 表示首先将**1(stdout)重定向到文件list**，然后将**2(stderr)重定向到1(stdout)**，这样**2(stderr)也被重定向到了文件list**。
+- 上面例子的错误写法:
+
+		find /home -name .bashrc 2>&1 > list
+	- 这条命令表示**先将2(stderr)重定向到1(stdout)**，**再将1(stdout)重定向到文件list**，但此时**2(stderr)仍然是重定向到屏幕**上。
+
+- **stdin**的用法:
+
+		cat > catfile < ~/.bashrc
+	- 上面的命令将**.bashrc文件作为cat命令的stdin**，然后将其**stdout重定向到文件catfile**，最后**相当于copy**的操作。
 
 [1]:	http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#cross-installation
