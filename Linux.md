@@ -10,6 +10,7 @@
 ## Bash
 ### 变量相关
 - 若变量需要在其他子进程执行，则需要以export来使变量变成环境变量，不妨以caffe路径为例：
+
 		export CAFFE_ROOT=/home/lurui/tools/caffe 
 		export PATH=$PATH:$CAFFE_ROOT/build/tools
 
