@@ -87,4 +87,9 @@
 	- 将last管道给cut命令，用空格关键字分割后取出每一行的第1个字符串；将以上结果管道给sort命令后排序，最后管道给uniq命令使得每个**相同字符串仅显示一次**，用**-c**参数查询**每个字符串出现的次数**。 
 	- 本命令查询所有用户的登录次数。
 
+- wc命令
+
+		last | grep "[a-zA-Z]" | grep -v 'wtmp' | wc 
+	- 将last输出结果管道给grep命令，挑选出其中的**非空行**，并**去除**带有’wtmp’关键字的行，然后依次输出剩余内容的**行数**、**单词数**以及**字符数**。
+
 [1]:	http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#cross-installation
