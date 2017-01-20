@@ -5,8 +5,8 @@
 - \*.tar.gz : tar程序**打包**的文件, 并**经过gzip的压缩**
 - \*.tar.bz2 : tar程序**打包**的文件, 并**经过bzip2的压缩**
 
-### gzip与zcat
-以打包文件man.config为例：
+### gzip
+以压缩文件man.config为例：
 
 	gzip -v man.config 
 	zcat man.config.gz
@@ -16,6 +16,18 @@
 - 第二条命令：类似于cat，适用于压缩文件。
 - 第三条命令：解压缩文件man.config.gz；此时**解压前的文件man.config.gz会被删除**。
 - 第四条命令：以**最高压缩比（-9）**压缩后通过-c重定向到文件man.config.gz；-c参数**默认**将压缩后的结果**输出到屏幕**。
+
+### bzip2
+同样以压缩文件man.config为例：
+
+	bzip2 -z man.config
+	bzcat man.config.bz2
+	bzip2 -d man.config.bz2 
+	bzip2 -9 -c man.config > man.config.bz2
+ - 第一条命令：打包文件man.config，此时**原来的文件man.config会被删除**。
+- 第二条命令：类似于cat，适用于压缩文件。
+- 第三条命令：解压缩文件man.config.gz；此时**解压前的文件man.config.bz2会被删除**。
+- 第四条命令：以**最高压缩比（-9）**压缩后通过-c重定向到文件man.config.bz2；-c参数**默认**将压缩后的结果**输出到屏幕**。
 
 ### 打包命令：tar
 
