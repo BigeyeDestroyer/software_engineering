@@ -73,4 +73,12 @@
 	- 在文件/etc/man.config中搜索关键字’MANPATH’，并用颜色显示出来。
 	- 首先在last命令的返回中找到那些**没有关键字**’root’的行，然后对返回的每一行**用空格进行分割**，并取出其中的第一行作为最终返回。 
 
+## 排序命令
+- sort命令 
+
+		cat /etc/passwd | sort -t ':' -k 3 -n 
+		last | cut -d ' ' -f 1 | sort 
+	- 第一条命令：将passwd文件的内容**逐行管道给sort**，用关**键字’:’对每一行进行分割**，然后根据每行的第3个字符串对所有行进行排序； -n 的含义是将**排序关键字**当作**纯数字**。
+	- 第二条命令：将last命令的内容首先**逐行管道给cut命令**，用**空格进行分割**后将每一行的第1个字符串进行排序。
+
 [1]:	http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#cross-installation
