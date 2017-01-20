@@ -65,4 +65,13 @@
 		echo $PATH | cut -d ':' -f 3,5
 	- 使用cut命令对$PATH的返回路径**按照’:’进行切割**并取出第3和第5个返回结果；注意，如果管道进来的是**多行**，那么该命令将**逐行分析stdin**。
 
+- grep的使用
+	grep可以解析一行文字，取得关键字，若该行存在关键字，就会整行显示出来。
+
+		grep --color=auto 'MANPATH' /etc/man.config
+	- 在文件/etc/man.config中搜索关键字’MANPATH’，并用颜色显示出来。
+
+		last | grep -v 'root' | cut -d ' ' -f 1
+	- 首先在last命令的返回中找到那些**没有关键字**’root’的行，然后对返回的每一行**用空格进行分割**，并取出其中的第一行作为最终返回。 
+
 [1]:	http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#cross-installation
