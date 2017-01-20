@@ -25,7 +25,7 @@
 
 		path=${PATH}
 		echo ${path#/*sbin:}
-	- **\\#**表示**从头开始**，删除最短的介于**/**与**sbin:**之间的内容
+	- **\\\\#**表示**从头开始**，删除最短的介于**/**与**sbin:**之间的内容
 	- **\#\#**表示**从头开始**删除**最长**的  
 
 ### 数据流重定向
@@ -52,5 +52,11 @@
 
 		cat > catfile < ~/.bashrc
 	- 上面的命令将**.bashrc文件作为cat命令的stdin**，然后将其**stdout重定向到文件catfile**，最后**相当于copy**的操作。
+
+- &&与||
+
+		command1 && command2 || command3
+		ls /tmp/abc && echo "exist" || echo "not exist"
+	- 执行command1，若成功执行则继续执行command2，否则执行command3 
 
 [1]:	http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#cross-installation
