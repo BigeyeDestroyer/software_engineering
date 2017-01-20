@@ -70,8 +70,12 @@
 
 		grep --color=auto 'MANPATH' /etc/man.config
 		last | grep -v 'root' | cut -d ' ' -f 1
-	- 在文件/etc/man.config中搜索关键字’MANPATH’，并用颜色显示出来。
-	- 首先在last命令的返回中找到那些**没有关键字**’root’的行，然后对返回的每一行**用空格进行分割**，并取出其中的第一行作为最终返回。 
+		last | grep 'root' -A2
+		last | grep 'root' -n7
+	- 第一条命令：在文件/etc/man.config中搜索关键字’MANPATH’，并用颜色显示出来。
+	- 第二条命令：首先在last命令的返回中找到那些**没有关键字**’root’的行，然后对返回的每一行**用空格进行分割**，并取出其中的第一行作为最终返回。 
+	- 第三条命令：打印找到的目标行，以及**该目标行的前两行**。
+	- 第四条命令：打印找到的目标行，并打印**该目标行+前3行+后3行**。
 
 ## 排序命令
 - sort命令 
@@ -91,5 +95,15 @@
 
 		last | grep "[a-zA-Z]" | grep -v 'wtmp' | wc 
 	- 将last输出结果管道给grep命令，挑选出其中的**非空行**，并**去除**带有’wtmp’关键字的行，然后依次输出剩余内容的**行数**、**单词数**以及**字符数**。
+
+## 双重重定向
+tee同时将数据流送与文件和屏幕(stdout)，使用方法如下：
+
+	last | tee last.list | cut -d ' ' -f 1
+	ls -l /home | tee ~/homefile | more
+	ls -l / | tee -a ~/homefile | more
+- 第一条命令：将last的返回管道给命令tee，**一方面**将该**stdin输出到文件last.list中**，**另一方面**将其**stdout给下一个命令**；也就是继续给cut命令，以空格作为关键字分割每一行并返回每一行的第一个字符串。
+- 第二条命令：将home目录的内容输出到文件homefile中。
+- 第三条命令：将根目录下的内容append到文件homefile中。
 
 [1]:	http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#cross-installation
