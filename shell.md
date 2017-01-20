@@ -7,8 +7,7 @@
 	- \*.h -\> /usr/local/cuda/include
 	- \*.so -\> /usr/local/cuda/lib64
 
-## Bash
-### 变量相关
+## 变量相关
 - 若变量需要在其他**子进程**执行，则需要以export来使变量变成环境变量，不妨以caffe路径为例：
 
 		export CAFFE_ROOT=/home/lurui/tools/caffe 
@@ -28,7 +27,7 @@
 	- **\\\\#**表示**从头开始**，删除最短的介于**/**与**sbin:**之间的内容
 	- **\#\#**表示**从头开始**删除**最长**的  
 
-### 数据流重定向
+## 数据流重定向
 - 基本概念：每个linux命令都有**标准输入**、**标准输出**以及**标准错误输出**：
 	- 标准输入(stdin): 代码为0, 使用\<或\<\<
 	- 标准输出(stdout): 代码为1, 使用\>或\>\>
@@ -59,7 +58,7 @@
 		ls /tmp/abc && echo "exist" || echo "not exist"
 	- 执行command1，若成功执行则继续执行command2，否则执行command3 
 
-### 管道命令(pipe)
+## 管道命令(pipe)
 管道命令仅能处理**前一个命令传来的正确信息**，也就是**standard output**的信息，对**standard error output**会**予以忽略**；管道后的命令必须能够接收**standard input**才行。
 - cut的使用
 
