@@ -107,11 +107,18 @@ tee同时将数据流送与文件和屏幕(stdout)，使用方法如下：
 - 第三条命令：将根目录下的内容append到文件homefile中。
 
 ## 可执行文本文件
-通过关键字**\#!**来指定解释器。
+### 通过关键字 **\#!** 来指定解释器：
 
 	#!/usr/bin/env python
 	#!/usr/bin/env sh
 - 第一条命令指定python为解释器。
 - 第二条命令指定shell为解释器。
+
+### 新建可执行命令；
+例如，在**/usr/local/bin**中创建文件**sant**，内容如下：
+
+	#!/usr/bin/env sh 
+	ssh lurui@bigeye1
+- 则从此直接在命令行中敲入**sant**即可直接登录bigeye1；也就是说，**文件sant等价于命令sant**。
 
 [1]:	http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#cross-installation
