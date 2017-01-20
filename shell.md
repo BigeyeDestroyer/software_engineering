@@ -59,4 +59,11 @@
 		ls /tmp/abc && echo "exist" || echo "not exist"
 	- 执行command1，若成功执行则继续执行command2，否则执行command3 
 
+### 管道命令(pipe)
+管道命令仅能处理**前一个命令传来的正确信息**，也就是**standard output**的信息，对**standard error output**会**予以忽略**；管道后的命令必须能够接收**standard input**才行。
+- cut的使用
+
+		echo $PATH | cut -d ':' -f 3,5
+	- 使用cut命令对$PATH的返回路径**按照’:’进行切割**并取出第3和第5个返回结果；注意，如果管道进来的是**多行**，那么该命令将**逐行分析stdin**。
+
 [1]:	http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#cross-installation
