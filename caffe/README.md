@@ -59,6 +59,12 @@ cmake正确后，就可以进行编译：
 
 然后重新`make`即可。
 
+### linux重启后无法进入图形界面的操作：
+- ctrl + alt + F1进入图形界面
+- sudo service lightdm stop
+- 进入cuda\_install, 运行cuda.run
+- sudo service lightdm start
+
 
 ## loss维持在83左右的可能原因
 * `base_lr`设置过大，导致发散
